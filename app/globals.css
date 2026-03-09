@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-handwriting-alt: "Shadows Into Light", cursive;
+  --font-handwriting-alt2: "Patrick Hand", cursive;
+
+  --color-cream: #faf5ef;
+  --color-pastel-pink: #f8d7da;
+  --color-pastel-blue: #d1ecf1;
+  --color-pastel-mint: #d4edda;
+  --color-pastel-lavender: #e2d9f3;
+}
