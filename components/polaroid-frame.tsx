@@ -28,17 +28,26 @@ interface PolaroidFrameProps {
   captionText: string;
   captionFont: CaptionFont;
   showDate: boolean;
+  developing?: boolean;
+  photoOpacity?: number;
+  className?: string;
 }
 
-// Instax Mini proportions:
-// Frame: 8.6 x 5.4 cm → ratio 1.593:1
-// Photo: 6.2 x 4.6 cm → ratio 1.348:1
-// Side border: ~0.4cm each side → ~7.4% of width
-// Top border: ~0.4cm → ~4.65% of height
-// Bottom border: ~2.0cm → ~23.3% of height
-
 const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
-  ({ imageSrc, frameColor, filter, captionText, captionFont, showDate }, ref) => {
+  (
+    {
+      imageSrc,
+      frameColor,
+      filter,
+      captionText,
+      captionFont,
+      showDate,
+      developing = false,
+      photoOpacity,
+      className,
+    },
+    ref
+  ) => {
     const bgColor = FRAME_COLORS[frameColor];
     const isDark = frameColor === "black";
     const textColor = isDark ? "#e5e5e5" : "#333333";
@@ -51,7 +60,7 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
           aspectRatio: "5.4 / 8.6",
           boxShadow: "0 4px 20px rgba(0,0,0,0.15), 0 1px 4px rgba(0,0,0,0.1)",
         }}
-        className="relative w-full max-w-[320px] rounded-sm overflow-hidden"
+        className={`relative rounded-sm overflow-hidden ${className ?? "w-full max-w-[320px]"}`}
       >
         {/* Paper texture overlay */}
         <div
@@ -66,6 +75,7 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
             backgroundSize: "128px 128px",
           }}
         />
+
         {/* Photo area */}
         <div
           style={{
@@ -88,6 +98,8 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
                 height: "100%",
                 objectFit: "cover",
                 filter: FILTERS[filter],
+                opacity: photoOpacity ?? 1,
+                transition: developing ? "none" : "opacity 0.6s ease-out",
               }}
             />
           ) : (
@@ -98,6 +110,31 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
               >
                 +
               </span>
+            </div>
+          )}
+
+          {/* Developing text overlay */}
+          {developing && (
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 2,
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: `"${captionFont}", cursive`,
+                  color: isDark ? "#999" : "#aaa",
+                  fontSize: "clamp(12px, 4cqw, 18px)",
+                }}
+                className="animate-pulse-text"
+              >
+                developing...
+              </p>
             </div>
           )}
         </div>
@@ -122,7 +159,7 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
               style={{
                 fontFamily: `"${captionFont}", cursive`,
                 color: textColor,
-                fontSize: "clamp(14px, 4.5cqw, 22px)",
+                fontSize: "clamp(12px, 4.5cqw, 20px)",
                 lineHeight: 1.2,
                 textAlign: "center",
                 wordBreak: "break-word",
@@ -137,8 +174,8 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
                 fontFamily: `"${captionFont}", cursive`,
                 color: textColor,
                 opacity: 0.5,
-                fontSize: "clamp(9px, 2.5cqw, 13px)",
-                marginTop: "4px",
+                fontSize: "clamp(8px, 2.5cqw, 12px)",
+                marginTop: "2px",
               }}
             >
               {new Date().toLocaleDateString("en-US", {

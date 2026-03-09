@@ -20,6 +20,8 @@ export type Filter =
 
 export type CaptionFont = "Caveat" | "Shadows Into Light" | "Patrick Hand";
 
+export type Phase = "power-on" | "capture" | "developing" | "done";
+
 interface PolaroidState {
   imageSrc: string | null;
   frameColor: FrameColor;
@@ -27,12 +29,14 @@ interface PolaroidState {
   captionText: string;
   captionFont: CaptionFont;
   showDate: boolean;
+  phase: Phase;
   setImageSrc: (src: string | null) => void;
   setFrameColor: (color: FrameColor) => void;
   setFilter: (filter: Filter) => void;
   setCaptionText: (text: string) => void;
   setCaptionFont: (font: CaptionFont) => void;
   setShowDate: (show: boolean) => void;
+  setPhase: (phase: Phase) => void;
   reset: () => void;
 }
 
@@ -45,6 +49,7 @@ export function PolaroidProvider({ children }: { children: ReactNode }) {
   const [captionText, setCaptionText] = useState("");
   const [captionFont, setCaptionFont] = useState<CaptionFont>("Caveat");
   const [showDate, setShowDate] = useState(false);
+  const [phase, setPhase] = useState<Phase>("power-on");
 
   const reset = () => {
     setImageSrc(null);
@@ -53,6 +58,7 @@ export function PolaroidProvider({ children }: { children: ReactNode }) {
     setCaptionText("");
     setCaptionFont("Caveat");
     setShowDate(false);
+    setPhase("power-on");
   };
 
   return (
@@ -64,12 +70,14 @@ export function PolaroidProvider({ children }: { children: ReactNode }) {
         captionText,
         captionFont,
         showDate,
+        phase,
         setImageSrc,
         setFrameColor,
         setFilter,
         setCaptionText,
         setCaptionFont,
         setShowDate,
+        setPhase,
         reset,
       }}
     >

@@ -12,3 +12,109 @@
   --color-pastel-mint: #d4edda;
   --color-pastel-lavender: #e2d9f3;
 }
+
+/* Flash effect */
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Film sliding up out of camera */
+@keyframes slide-up {
+  0% { transform: translateY(100%); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(0); }
+}
+
+/* Photo developing - slow fade in */
+@keyframes develop {
+  0% { opacity: 0; }
+  30% { opacity: 0.1; }
+  60% { opacity: 0.25; }
+  100% { opacity: 0.3; }
+}
+
+/* Full reveal after developing */
+@keyframes reveal {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Developing text pulse */
+@keyframes pulse-text {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* Gentle wobble while developing */
+@keyframes wobble {
+  0%, 100% { transform: rotate(-0.5deg); }
+  50% { transform: rotate(0.5deg); }
+}
+
+/* Settle bounce when fully developed */
+@keyframes settle {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Lens rotation on power-on */
+@keyframes lens-rotate {
+  0% { transform: rotate(0deg) scale(1); }
+  70% { transform: rotate(90deg) scale(1); }
+  85% { transform: rotate(90deg) scale(1.15); }
+  100% { transform: rotate(90deg) scale(1.1); }
+}
+
+/* Controls fade in */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Controls fade out */
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: flash 0.15s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-develop {
+  animation: develop 4s ease-out forwards;
+}
+
+.animate-reveal {
+  animation: reveal 0.6s ease-out forwards;
+}
+
+.animate-pulse-text {
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+.animate-wobble {
+  animation: wobble 3s ease-in-out infinite;
+}
+
+.animate-settle {
+  animation: settle 0.3s ease-out forwards;
+}
+
+.animate-lens-rotate {
+  animation: lens-rotate 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.3s ease-out forwards;
+}
