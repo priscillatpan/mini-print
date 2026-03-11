@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${caveat.variable} ${shadowsIntoLight.variable} ${patrickHand.variable} antialiased text-neutral-900 min-h-dvh`}
-        style={{ background: "linear-gradient(170deg, #b5cfe0 0%, #c4daea 30%, #d0e2ef 60%, #bdd4e5 100%)" }}
+        style={{ background: "linear-gradient(170deg, #f0e6db 0%, #ebe1d6 30%, #f2ece5 60%, #ede4da 100%)" }}
       >
         <PolaroidProvider>{children}</PolaroidProvider>
       </body>

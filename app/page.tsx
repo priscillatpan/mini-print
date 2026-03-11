@@ -161,15 +161,15 @@ export default function Home() {
         className={`h-dvh flex flex-col items-center justify-center px-4 cursor-pointer select-none ${splashExiting ? "animate-splash-exit" : ""}`}
         onClick={handleSplashTap}
       >
-        <p className="text-[#4a7a9a] text-xs mb-1 animate-splash-subtitle tracking-wide">
+        <p className="text-[#9a8575] text-xs mb-1 animate-splash-subtitle tracking-wide">
           welcome to
         </p>
         <h1
-          className="text-3xl font-semibold tracking-tight text-[#2a5a7a] mb-3 animate-splash-title"
+          className="text-3xl font-semibold tracking-tight text-[#6b5646] mb-3 animate-splash-title"
         >
           mini print
         </h1>
-        <p className="text-[#6a9abb] text-[11px] animate-splash-subtitle" style={{ animationDelay: "0.3s" }}>
+        <p className="text-[#b8a696] text-[11px] animate-splash-subtitle" style={{ animationDelay: "0.3s" }}>
           tap to start
         </p>
       </div>
@@ -187,14 +187,14 @@ export default function Home() {
         {/* Camera icon */}
         <div className="mb-6 animate-fade-in">
           <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="13" r="3" stroke="#3a7aaa" strokeWidth="1.5" />
-            <path d="M3 13c0-2.81 0-4.21.67-5.22a4 4 0 0 1 1.1-1.1C5.79 6 7.19 6 10 6h4c2.81 0 4.21 0 5.22.67.44.29.81.67 1.1 1.1.67 1.01.68 2.42.68 5.22s0 4.21-.67 5.22a4 4 0 0 1-1.1 1.1c-1.01.68-2.42.68-5.22.68h-4c-2.81 0-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1c-.23-.35-.38-.74-.48-1.22" stroke="#3a7aaa" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M18 10h-.5" stroke="#3a7aaa" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M14.5 3.5h-5" stroke="#3a7aaa" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="12" cy="13" r="3" stroke="#8b7260" strokeWidth="1.5" />
+            <path d="M3 13c0-2.81 0-4.21.67-5.22a4 4 0 0 1 1.1-1.1C5.79 6 7.19 6 10 6h4c2.81 0 4.21 0 5.22.67.44.29.81.67 1.1 1.1.67 1.01.68 2.42.68 5.22s0 4.21-.67 5.22a4 4 0 0 1-1.1 1.1c-1.01.68-2.42.68-5.22.68h-4c-2.81 0-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1c-.23-.35-.38-.74-.48-1.22" stroke="#8b7260" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M18 10h-.5" stroke="#8b7260" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M14.5 3.5h-5" stroke="#8b7260" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </div>
 
-        <p className="text-[#4a7a9a] text-xs mb-10 animate-fade-in tracking-wide" style={{ animationDelay: "0.1s", animationFillMode: "both" }}>
+        <p className="text-[#9a8575] text-xs mb-10 animate-fade-in tracking-wide" style={{ animationDelay: "0.1s", animationFillMode: "both" }}>
           mini print
         </p>
 
@@ -205,24 +205,24 @@ export default function Home() {
             className="flex flex-col items-center gap-2.5 px-8 py-5 bg-white/35 backdrop-blur-sm border border-white/40 rounded-2xl active:scale-95 transition-all shadow-sm"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="13" r="3" stroke="#3a6a8a" strokeWidth="1.5" />
-              <path d="M3 13c0-2.81 0-4.21.67-5.22a4 4 0 0 1 1.1-1.1C5.79 6 7.19 6 10 6h4c2.81 0 4.21 0 5.22.67.44.29.81.67 1.1 1.1.67 1.01.68 2.42.68 5.22s0 4.21-.67 5.22a4 4 0 0 1-1.1 1.1c-1.01.68-2.42.68-5.22.68h-4c-2.81 0-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1c-.23-.35-.38-.74-.48-1.22" stroke="#3a6a8a" strokeWidth="1.5" strokeLinecap="round" />
-              <path d="M18 10h-.5" stroke="#3a6a8a" strokeWidth="1.5" strokeLinecap="round" />
-              <path d="M14.5 3.5h-5" stroke="#3a6a8a" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="12" cy="13" r="3" stroke="#7a6855" strokeWidth="1.5" />
+              <path d="M3 13c0-2.81 0-4.21.67-5.22a4 4 0 0 1 1.1-1.1C5.79 6 7.19 6 10 6h4c2.81 0 4.21 0 5.22.67.44.29.81.67 1.1 1.1.67 1.01.68 2.42.68 5.22s0 4.21-.67 5.22a4 4 0 0 1-1.1 1.1c-1.01.68-2.42.68-5.22.68h-4c-2.81 0-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1c-.23-.35-.38-.74-.48-1.22" stroke="#7a6855" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M18 10h-.5" stroke="#7a6855" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M14.5 3.5h-5" stroke="#7a6855" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-            <span className="text-[13px] font-medium text-[#3a6a8a]">Camera</span>
+            <span className="text-[13px] font-medium text-[#7a6855]">Camera</span>
           </button>
 
           <button
             onClick={() => galleryInputRef.current?.click()}
             className="flex flex-col items-center gap-2.5 px-8 py-5 bg-white/35 backdrop-blur-sm border border-white/40 rounded-2xl active:scale-95 transition-all shadow-sm"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" strokeWidth="1.5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7a6855" strokeWidth="1.5">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
             </svg>
-            <span className="text-[13px] font-medium text-[#3a6a8a]">Library</span>
+            <span className="text-[13px] font-medium text-[#7a6855]">Library</span>
           </button>
         </div>
 
@@ -251,21 +251,28 @@ export default function Home() {
   if (phase === "developing") {
     return (
       <div className="h-dvh flex flex-col items-center justify-center px-6">
-        <p className="text-sm text-[#4a7a9a] mb-5">add a note</p>
+        <p className="text-sm text-[#9a8575] mb-5">add a note?</p>
 
-        {/* Polaroid ejecting from camera */}
-        <div className="mb-6 animate-eject">
-          <PolaroidFrame
-            imageSrc={imageSrc}
-            frameColor={frameColor}
-            filter={filter}
-            captionText={captionText}
-            captionFont={captionFont}
-            showDate={showDate}
-            developing={true}
-            photoOpacity={photoOpacity}
-            className="w-[180px]"
-          />
+        {/* Printer slot + polaroid ejecting */}
+        <div className="relative mb-6 flex flex-col items-center">
+          {/* Slot — polaroid is clipped behind this */}
+          <div className="w-[200px] h-[14px] bg-white/40 backdrop-blur-sm rounded-full border border-white/50 z-10 relative" />
+          {/* Polaroid container — clipped so it only appears below the slot */}
+          <div className="overflow-hidden -mt-1">
+            <div className="animate-eject">
+              <PolaroidFrame
+                imageSrc={imageSrc}
+                frameColor={frameColor}
+                filter={filter}
+                captionText={captionText}
+                captionFont={captionFont}
+                showDate={showDate}
+                developing={true}
+                photoOpacity={photoOpacity}
+                className="w-[180px]"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Caption input */}
@@ -275,10 +282,10 @@ export default function Home() {
           onChange={(e) => setCaptionText(e.target.value.slice(0, 40))}
           placeholder="write something..."
           maxLength={40}
-          className="w-full max-w-[280px] border-b border-[#a4c4dd] bg-transparent px-1 py-2 text-center text-sm text-[#2a5a7a] focus:outline-none focus:border-[#6a9abb] placeholder:text-[#9abccc]"
+          className="w-full max-w-[280px] border-b border-[#c8b8a8] bg-transparent px-1 py-2 text-center text-sm text-[#6b5646] focus:outline-none focus:border-[#b8a696] placeholder:text-[#c4b5a5]"
         />
 
-        <p className="text-[10px] text-[#8ab0c8] mt-1 mb-6">
+        <p className="text-[10px] text-[#baa998] mt-1 mb-6">
           {captionText.length}/40
         </p>
 
@@ -291,7 +298,7 @@ export default function Home() {
               title={opt.label}
               className={`w-7 h-7 rounded-full border-2 transition-all ${
                 frameColor === opt.value
-                  ? "border-[#3a7aaa] scale-110"
+                  ? "border-[#8b7260] scale-110"
                   : "border-white/50"
               }`}
               style={{ backgroundColor: FRAME_COLORS[opt.value] }}
@@ -307,13 +314,13 @@ export default function Home() {
             onChange={(e) => setShowDate(e.target.checked)}
             className="rounded w-3.5 h-3.5"
           />
-          <span className="text-xs text-[#4a7a9a]">add date</span>
+          <span className="text-xs text-[#9a8575]">add date</span>
         </label>
 
         {/* Done */}
         <button
           onClick={handleDone}
-          className="px-10 py-2.5 text-sm font-medium bg-[#3a7aaa] text-white rounded-full hover:bg-[#2a6a9a] transition-colors shadow-sm"
+          className="px-10 py-2.5 text-sm font-medium bg-[#8b7260] text-white rounded-full hover:bg-[#7a6250] transition-colors shadow-sm"
         >
           Done
         </button>
@@ -343,7 +350,7 @@ export default function Home() {
         <button
           onClick={handleShare}
           disabled={exporting}
-          className="w-full py-3 text-sm font-medium bg-[#3a7aaa] text-white rounded-full hover:bg-[#2a6a9a] disabled:opacity-50 transition-colors shadow-sm"
+          className="w-full py-3 text-sm font-medium bg-[#8b7260] text-white rounded-full hover:bg-[#7a6250] disabled:opacity-50 transition-colors shadow-sm"
         >
           {exporting ? "Exporting..." : "Share"}
         </button>
@@ -351,14 +358,14 @@ export default function Home() {
         <button
           onClick={handleDownload}
           disabled={exporting}
-          className="w-full py-3 text-sm font-medium text-[#3a6a8a] border border-[#3a7aaa]/30 rounded-full hover:border-[#3a7aaa]/50 disabled:opacity-50 transition-colors"
+          className="w-full py-3 text-sm font-medium text-[#7a6855] border border-[#8b7260]/30 rounded-full hover:border-[#8b7260]/50 disabled:opacity-50 transition-colors"
         >
           Save
         </button>
 
         <button
           onClick={handleStartOver}
-          className="w-full py-2 text-xs text-[#6a9abb] hover:text-[#3a6a8a] transition-colors"
+          className="w-full py-2 text-xs text-[#b8a696] hover:text-[#7a6855] transition-colors"
         >
           start over
         </button>

@@ -113,30 +113,6 @@ const PolaroidFrame = forwardRef<HTMLDivElement, PolaroidFrameProps>(
             </div>
           )}
 
-          {/* Developing text overlay */}
-          {developing && (
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                zIndex: 2,
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: `"${captionFont}", cursive`,
-                  color: isDark ? "#999" : "#aaa",
-                  fontSize: "clamp(12px, 4cqw, 18px)",
-                }}
-                className="animate-pulse-text"
-              >
-                developing...
-              </p>
-            </div>
-          )}
         </div>
 
         {/* Caption area */}

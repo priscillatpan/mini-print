@@ -148,25 +148,19 @@
   animation: splash-exit 0.3s ease-in forwards;
 }
 
-/* Print ejecting from camera slot — smooth single slide */
+/* Print ejecting from printer slot — slides down from hidden */
 @keyframes eject-print {
   0% {
-    transform: translateY(-20px);
-    clip-path: inset(100% 0 0 0);
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
+    transform: translateY(-100%);
   }
   100% {
     transform: translateY(0);
-    clip-path: inset(0 0 0 0);
-    opacity: 1;
   }
 }
 
 .animate-eject {
-  animation: eject-print 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transform: translateY(-100%);
+  animation: eject-print 2s cubic-bezier(0.22, 0.6, 0.36, 1) forwards;
 }
 
 /* Camera slot the print comes out of */
