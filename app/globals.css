@@ -118,3 +118,63 @@
 .animate-fade-out {
   animation: fade-out 0.3s ease-out forwards;
 }
+
+/* Splash screen title */
+@keyframes splash-title {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes splash-subtitle {
+  0%, 30% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splash-exit {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
+.animate-splash-title {
+  animation: splash-title 0.6s ease-out forwards;
+}
+
+.animate-splash-subtitle {
+  animation: splash-subtitle 0.8s ease-out forwards;
+}
+
+.animate-splash-exit {
+  animation: splash-exit 0.3s ease-in forwards;
+}
+
+/* Print ejecting from camera slot — smooth single slide */
+@keyframes eject-print {
+  0% {
+    transform: translateY(-20px);
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.animate-eject {
+  animation: eject-print 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Camera slot the print comes out of */
+@keyframes slot-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
+  50% { box-shadow: 0 0 12px rgba(255,255,255,0.15); }
+}
+
+.animate-slot-glow {
+  animation: slot-glow 1.2s ease-out forwards;
+}
