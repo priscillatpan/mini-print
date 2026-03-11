@@ -261,10 +261,10 @@ export default function Home() {
   if (phase === "developing") {
     return (
       <div className="h-dvh flex flex-col items-center justify-center px-6">
-        <p className="text-sm text-[#9a8575] mb-5">add a note?</p>
+        <p className="text-sm text-[#9a8575] mb-3">add a note?</p>
 
         {/* Printer slot + polaroid ejecting */}
-        <div className="relative mb-6 flex flex-col items-center">
+        <div className="relative mb-4 flex flex-col items-center">
           {/* Slot — polaroid is clipped behind this */}
           <div className="w-[200px] h-[14px] bg-white/40 backdrop-blur-sm rounded-full border border-white/50 z-10 relative" />
           {/* Polaroid container — clipped so it only appears below the slot */}
@@ -295,37 +295,37 @@ export default function Home() {
           className="w-full max-w-[280px] border-b border-[#c8b8a8] bg-transparent px-1 py-2 text-center text-sm text-[#6b5646] focus:outline-none focus:border-[#b8a696] placeholder:text-[#c4b5a5]"
         />
 
-        <p className="text-[10px] text-[#baa998] mt-1 mb-6">
+        <p className="text-[10px] text-[#baa998] mt-1 mb-4">
           {captionText.length}/40
         </p>
 
-        {/* Frame colors */}
-        <div className="flex gap-2 mb-8">
-          {FRAME_OPTIONS.map((opt) => (
-            <button
-              key={opt.value}
-              onClick={() => setFrameColor(opt.value)}
-              title={opt.label}
-              className={`w-7 h-7 rounded-full border-2 transition-all ${
-                frameColor === opt.value
-                  ? "border-[#8b7260] scale-110"
-                  : "border-white/50"
-              }`}
-              style={{ backgroundColor: FRAME_COLORS[opt.value] }}
+        {/* Frame colors + date toggle */}
+        <div className="flex items-center gap-3 mb-5">
+          <div className="flex gap-2">
+            {FRAME_OPTIONS.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => setFrameColor(opt.value)}
+                title={opt.label}
+                className={`w-7 h-7 rounded-full border-2 transition-all ${
+                  frameColor === opt.value
+                    ? "border-[#8b7260] scale-110"
+                    : "border-white/50"
+                }`}
+                style={{ backgroundColor: FRAME_COLORS[opt.value] }}
+              />
+            ))}
+          </div>
+          <label className="flex items-center gap-1.5 cursor-pointer ml-1">
+            <input
+              type="checkbox"
+              checked={showDate}
+              onChange={(e) => setShowDate(e.target.checked)}
+              className="rounded w-3.5 h-3.5"
             />
-          ))}
+            <span className="text-xs text-[#9a8575]">date</span>
+          </label>
         </div>
-
-        {/* Date toggle */}
-        <label className="flex items-center gap-1.5 cursor-pointer mb-8">
-          <input
-            type="checkbox"
-            checked={showDate}
-            onChange={(e) => setShowDate(e.target.checked)}
-            className="rounded w-3.5 h-3.5"
-          />
-          <span className="text-xs text-[#9a8575]">add date</span>
-        </label>
 
         {/* Done */}
         <button
