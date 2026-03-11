@@ -66,13 +66,13 @@ export default function Home() {
       setPhotoOpacity(0);
       let opacity = 0;
       developIntervalRef.current = setInterval(() => {
-        opacity += 0.005;
+        opacity += 0.003;
         if (opacity >= 0.3) {
           opacity = 0.3;
           if (developIntervalRef.current) clearInterval(developIntervalRef.current);
         }
         setPhotoOpacity(opacity);
-      }, 100);
+      }, 50);
       return () => {
         if (developIntervalRef.current) clearInterval(developIntervalRef.current);
       };
@@ -90,7 +90,17 @@ export default function Home() {
 
   const handleDone = () => {
     if (developIntervalRef.current) clearInterval(developIntervalRef.current);
-    setPhase("done");
+    // Quick fade from current opacity to full
+    let opacity = photoOpacity;
+    const fadeIn = setInterval(() => {
+      opacity += 0.05;
+      if (opacity >= 1) {
+        opacity = 1;
+        clearInterval(fadeIn);
+        setPhase("done");
+      }
+      setPhotoOpacity(opacity);
+    }, 30);
   };
 
   const generateImage = async () => {
